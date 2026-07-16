@@ -7,31 +7,47 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-> **An end-to-end machine learning project that predicts student academic success using demographic, behavioral, and academic data while demonstrating a complete predictive analytics workflow from data preparation to business recommendations.**
+> **Portfolio Project | Machine Learning | Predictive Analytics | Classification | Python | Scikit-Learn**
+
+An end-to-end machine learning project demonstrating how predictive analytics can identify students at academic risk using demographic, behavioral, and academic data. This project showcases the complete data science lifecycle—from data preparation and exploratory analysis to model development, evaluation, and business recommendations.
 
 ---
 
 # 📖 Project Overview
 
-Educational institutions increasingly rely on predictive analytics to identify students who may benefit from additional academic support. Early identification allows advisors and instructors to intervene before academic performance declines.
+Educational institutions face ongoing challenges in identifying students who may be at academic risk before poor performance leads to course failure or withdrawal. Predictive analytics enables educators to proactively identify these students and provide targeted interventions that improve student success and retention.
 
 This project develops and compares multiple supervised machine learning models to classify whether a student is likely to pass or fail based on academic performance, study habits, attendance, lifestyle, and demographic characteristics.
 
-The project emphasizes not only predictive performance but also model interpretability, ethical AI practices, and practical business recommendations for educational decision-makers.
+Beyond predictive performance, this project emphasizes model interpretability, ethical AI practices, and practical business recommendations for educational decision-makers.
 
 ---
 
 # 🎯 Business Objective
 
-The objective of this project is to develop a predictive classification model capable of identifying students who may be at academic risk while maintaining transparency, fairness, and responsible use of educational data.
+The objective of this project is to develop a predictive classification model capable of identifying students who may benefit from early academic intervention while maintaining transparency, fairness, and responsible use of educational data.
 
 Potential applications include:
 
 - Early intervention programs
 - Academic advising
 - Student retention initiatives
+- Student success analytics
 - Resource allocation
 - Institutional decision support
+
+---
+
+# ⭐ Project Highlights
+
+- Complete end-to-end machine learning workflow
+- Four supervised classification models
+- Exploratory Data Analysis (EDA)
+- Feature engineering and preprocessing pipeline
+- Business-focused model evaluation
+- Feature importance analysis
+- Ethical AI and responsible analytics considerations
+- Professional documentation with reproducible notebooks
 
 ---
 
@@ -46,54 +62,30 @@ student-exam-performance-classification/
 │   └── model/
 │
 ├── images/
-│   ├── correlation_heatmap.png
-│   ├── feature_importance.png
-│   ├── model_comparison.png
-│   ├── pass_fail_distribution.png
-│   └── study_hours_vs_gpa.png
 │
 ├── models/
-│   ├── gradient_boosting.pkl
-│   ├── random_forest.pkl
-│   ├── decision_tree.pkl
-│   ├── logistic_regression.pkl
-│   └── scaler.pkl
 │
 ├── notebooks/
-│   ├── 01_Data_Understanding.ipynb
-│   ├── 02_Data_Preparation.ipynb
-│   ├── 03_Exploratory_Data_Analysis.ipynb
-│   ├── 04_Feature_Engineering.ipynb
-│   ├── 05_Model_Development.ipynb
-│   ├── 06_Model_Evaluation.ipynb
-│   └── 07_Project_Summary.ipynb
 │
 ├── reports/
+│
 ├── README.md
-└── LICENSE
+├── LICENSE
+└── .gitignore
 ```
 
 ---
 
 # 🔄 Project Workflow
 
-```text
-Data Understanding
-        ↓
-Data Preparation
-        ↓
-Exploratory Data Analysis
-        ↓
-Feature Engineering
-        ↓
-Machine Learning Models
-        ↓
-Model Evaluation
-        ↓
-Business Recommendations
-        ↓
-Project Summary
-```
+1. Data Understanding
+2. Data Cleaning & Preparation
+3. Exploratory Data Analysis
+4. Feature Engineering
+5. Machine Learning Model Development
+6. Model Evaluation
+7. Business Recommendations
+8. Executive Summary
 
 ---
 
@@ -112,20 +104,24 @@ Project Summary
 
 # 🤖 Machine Learning Models
 
-The following supervised learning algorithms were developed and evaluated:
+Four supervised learning algorithms were trained and compared to evaluate tradeoffs between predictive performance, interpretability, and practical implementation.
+
+The following models were developed:
 
 - Logistic Regression
 - Decision Tree
 - Random Forest
 - Gradient Boosting
 
-Performance was evaluated using:
+Each model was evaluated using:
 
 - Accuracy
 - Precision
 - Recall
 - F1 Score
 - ROC-AUC
+- Confusion Matrix
+- Feature Importance
 
 ---
 
@@ -160,7 +156,7 @@ Performance was evaluated using:
 
 ---
 
-## Study Hours vs Overall GPA
+## Relationship Between Study Hours and GPA
 
 ![Study Hours vs GPA](images/study_hours_vs_gpa.png)
 
@@ -174,62 +170,64 @@ Performance was evaluated using:
 
 # 🔍 Key Findings
 
-- Study hours per week were the strongest predictor of academic success.
-- Sleep duration, stress level, attendance rate, and motivation score were among the most influential variables.
-- Behavioral and academic factors contributed more to predictive performance than demographic characteristics.
-- Gradient Boosting achieved the highest ROC-AUC score while maintaining excellent overall classification performance.
-- Feature importance analysis provides actionable insights that educational institutions can use to support student success initiatives.
+- Gradient Boosting achieved the highest overall ROC-AUC score (0.9373), making it the strongest-performing model evaluated.
+- Study hours per week were the single most important predictor of academic success.
+- Sleep duration, stress level, attendance rate, and motivation score consistently ranked among the strongest predictive variables.
+- Behavioral and academic characteristics contributed more to prediction accuracy than demographic variables.
+- Feature importance analysis provides actionable insights that educational institutions can use to support early intervention and improve student outcomes.
 
 ---
 
 # ⚖️ Ethics & Responsible AI
 
-This project considers responsible use of predictive analytics by addressing:
+This project emphasizes the responsible use of predictive analytics within educational environments by addressing:
 
 - Student privacy and confidentiality
 - Ethical use of educational data
 - Transparency and model interpretability
 - Human oversight in academic decision-making
-- Awareness of algorithmic bias
+- Algorithmic bias awareness
 - Responsible AI practices
 - Data governance principles
 
-Predictive models should be used to support educators and advisors—not to replace human judgment or make automated decisions affecting students.
+Predictive analytics should support educators and advisors—not replace human judgment or become the sole basis for academic decisions.
 
 ---
 
 # 🚀 Future Improvements
 
-Potential future enhancements include:
+Future enhancements for this project include:
 
-- Hyperparameter optimization
+- Hyperparameter optimization using GridSearchCV
 - K-Fold Cross Validation
 - XGBoost and LightGBM models
-- SHAP Explainability
+- SHAP explainability
 - Fairness and bias evaluation metrics
-- Streamlit dashboard deployment
+- Interactive Streamlit dashboard
 - Automated model retraining pipeline
-- Real-time prediction API
+- REST API for real-time predictions
+
+---
+
+# 📝 Notes
+
+Due to GitHub file size limitations, the serialized Random Forest model and intermediate training/testing datasets are not included in this repository. All models can be reproduced by running **Notebook 05 – Machine Learning Model Development**.
 
 ---
 
 # 👩‍💻 Author
 
-**Tessa Becker**
+## **Tessa Becker**
 
-**Founder, Kronos Intelligence**
+**Founder | Kronos Intelligence**
 
-Specializing in:
+Data Analytics • Predictive Analytics • Machine Learning • Data Governance • Business Intelligence
 
-- Data Analytics
-- Predictive Analytics
-- Machine Learning
-- Data Governance
-- Business Intelligence
+Kronos Intelligence develops practical data-driven solutions that transform complex information into actionable insights through analytics, visualization, and machine learning.
 
 ---
 
-## ⭐ If you found this project interesting, consider starring the repository!
+## ⭐ If you found this project helpful or interesting, please consider starring the repository!
 
 Data Analytics | Data Governance | Machine Learning
 
