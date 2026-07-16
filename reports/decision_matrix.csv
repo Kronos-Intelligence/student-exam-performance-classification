@@ -1,0 +1,6 @@
+Evaluation Criterion,Logistic Regression,Decision Tree,Random Forest,Gradient Boosting
+Predictive Performance,★★★★☆,★★★☆☆,★★★★☆,★★★★★
+Interpretability,★★★★★,★★★★★,★★★☆☆,★★☆☆☆
+Computational Efficiency,★★★★★,★★★★☆,★★★☆☆,★★☆☆☆
+Ease of Deployment,★★★★★,★★★★☆,★★★☆☆,★★★☆☆
+Business Suitability,★★★★☆,★★★★☆,★★★★★,★★★★★
